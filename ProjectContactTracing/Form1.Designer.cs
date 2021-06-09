@@ -43,6 +43,7 @@ namespace ProjectContactTracing
             this.txtbxSex = new System.Windows.Forms.TextBox();
             this.txtbxContactNumber = new System.Windows.Forms.TextBox();
             this.txtbxAddress = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -172,11 +173,21 @@ namespace ProjectContactTracing
             this.txtbxAddress.Size = new System.Drawing.Size(527, 32);
             this.txtbxAddress.TabIndex = 13;
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(632, 390);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(130, 35);
+            this.btnSave.TabIndex = 14;
+            this.btnSave.Text = "&SAVE";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtbxAddress);
             this.Controls.Add(this.txtbxContactNumber);
             this.Controls.Add(this.txtbxSex);
@@ -214,6 +225,7 @@ namespace ProjectContactTracing
         private System.Windows.Forms.TextBox txtbxSex;
         private System.Windows.Forms.TextBox txtbxContactNumber;
         private System.Windows.Forms.TextBox txtbxAddress;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 
