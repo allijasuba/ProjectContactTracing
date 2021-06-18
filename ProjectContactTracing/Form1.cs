@@ -25,20 +25,31 @@ namespace ProjectContactTracing
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            saveInfo(txtbxFirstName.Text, txtbxMiddleInitial.Text, txtbxLastName.Text, byte.Parse(txtbxAge.Text), txtbxSex.Text, int.Parse(txtbxContactNumber.Text), txtbxAddress.Text);
+            saveInfo(txtbxFirstName.Text, txtbxMiddleInitial.Text, txtbxLastName.Text, byte.Parse(txtbxAge.Text), txtbxSex.Text, txtbxContactNumber.Text, txtbxAddress.Text);
         }
 
-        private void saveInfo(String firstname, String middleinitial, String lastname, byte age, String sex, int contactnumber, String address)
+        private void saveInfo(String firstname, String middleinitial, String lastname, byte age, String sex, String contactnumber, String address)
         {
-            StreamWriter output = File.AppendText("output.txt");
+            StreamWriter outputFile;
+            String createDate = DateTime.Now.ToLongDateString();
+
+            StreamWriter output = File.AppendText(createDate);
+            output.WriteLine("===========");
             output.WriteLine(firstname);
             output.WriteLine(middleinitial);
             output.WriteLine(lastname);
             output.WriteLine(age.ToString());
             output.WriteLine(sex);
-            output.WriteLine(contactnumber.ToString());
+            output.WriteLine(contactnumber);
             output.WriteLine(address);
             output.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            StreamWriter outputFile;
+            outputFile = File.AppendText("output.txt");
+            outputFile.Close();
         }
     }
 }
