@@ -51,5 +51,15 @@ namespace ProjectContactTracing
             outputFile = File.AppendText("output.txt");
             outputFile.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
